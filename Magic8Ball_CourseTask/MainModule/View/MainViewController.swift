@@ -11,6 +11,8 @@ class MainViewController: UIViewController {
     
     //MARK: - Properties
     
+    var presenter: MainPresenterProtocol!
+    
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.text = "Спроси меня..."
@@ -43,23 +45,31 @@ class MainViewController: UIViewController {
     }()
 
 
-    // MARK: - Lifcycle
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = #colorLiteral(red: 0.5501046777, green: 0.9138562083, blue: 0.9441761374, alpha: 1)
         
+        askButton.addTarget(self, action: #selector(askButtonTapped), for: .touchUpInside)
+        
         viewHierarche()
+        setupNavBar()
         applyConstraints()
         
     }
     
     
-    // MARK: - Subviews
+    // MARK: - UI
     private func viewHierarche() {
         view.addSubview(titleLabel)
         view.addSubview(ballImageView)
         view.addSubview(askButton)
+    }
+    
+    private func setupNavBar() {
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
     }
     
     // MARK: - Layout
@@ -88,7 +98,19 @@ class MainViewController: UIViewController {
             
         ])
     }
+    
+    // MARK: - Action
+    @objc func askButtonTapped() {
+        presenter.showAnswer()
+    }
+}
 
-
+// MARK: - MainViewProtocol
+extension MainViewController: MainViewProtocol {
+    func setAnswer(answer: UIImage) {
+        self.ballImageView.image = answer
+    }
+    
+    
 }
 

@@ -5,12 +5,15 @@
 //  Created by Александр Прайд on 31.10.2022.
 //
 
-import Foundation
+import UIKit
 
-protocol MainInput {
-    func showAnswer()
+protocol MainViewProtocol: AnyObject {
+    func setAnswer(answer: UIImage)
+    
 }
 
-protocol MainOutput {
+protocol MainPresenterProtocol: AnyObject {
     
+    init(view: MainViewProtocol, model: Answer)
+    func showAnswer()
 }

@@ -17,6 +17,10 @@
 		D0A97042291019CD00FA6697 /* Magic8Ball_CourseTaskUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A97041291019CD00FA6697 /* Magic8Ball_CourseTaskUITestsLaunchTests.swift */; };
 		D0A9704F29101C7000FA6697 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9704E29101C7000FA6697 /* Constants.swift */; };
 		D0A970532910295F00FA6697 /* MainViewIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A970522910295F00FA6697 /* MainViewIO.swift */; };
+		D0A9705529102DCD00FA6697 /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9705429102DCD00FA6697 /* MainPresenter.swift */; };
+		D0A9705729102E7F00FA6697 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9705629102E7F00FA6697 /* Answer.swift */; };
+		D0A97059291030FB00FA6697 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A97058291030FB00FA6697 /* Assembly.swift */; };
+		D0A9705F291044EC00FA6697 /* MainPresentetTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0A9705E291044EB00FA6697 /* MainPresentetTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		D0A97041291019CD00FA6697 /* Magic8Ball_CourseTaskUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic8Ball_CourseTaskUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		D0A9704E29101C7000FA6697 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D0A970522910295F00FA6697 /* MainViewIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewIO.swift; sourceTree = "<group>"; };
+		D0A9705429102DCD00FA6697 /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		D0A9705629102E7F00FA6697 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
+		D0A97058291030FB00FA6697 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		D0A9705E291044EB00FA6697 /* MainPresentetTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresentetTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +89,7 @@
 		D0A97012291019C400FA6697 = {
 			isa = PBXGroup;
 			children = (
+				D0A9706029122A2800FA6697 /* Screenshot */,
 				D0A9701D291019C400FA6697 /* Magic8Ball_CourseTask */,
 				D0A97034291019CD00FA6697 /* Magic8Ball_CourseTaskTests */,
 				D0A9703E291019CD00FA6697 /* Magic8Ball_CourseTaskUITests */,
@@ -115,6 +124,7 @@
 		D0A97034291019CD00FA6697 /* Magic8Ball_CourseTaskTests */ = {
 			isa = PBXGroup;
 			children = (
+				D0A9705D291044CC00FA6697 /* TestMainModule */,
 				D0A97035291019CD00FA6697 /* Magic8Ball_CourseTaskTests.swift */,
 			);
 			path = Magic8Ball_CourseTaskTests;
@@ -132,7 +142,10 @@
 		D0A970502910292800FA6697 /* MainModule */ = {
 			isa = PBXGroup;
 			children = (
-				D0A97022291019C400FA6697 /* MainViewController.swift */,
+				D0A97058291030FB00FA6697 /* Assembly.swift */,
+				D0A9705B2910311D00FA6697 /* Presenter */,
+				D0A9705A2910310F00FA6697 /* View */,
+				D0A9705C2910312E00FA6697 /* Model */,
 				D0A970522910295F00FA6697 /* MainViewIO.swift */,
 			);
 			path = MainModule;
@@ -144,6 +157,45 @@
 				D0A9704E29101C7000FA6697 /* Constants.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D0A9705A2910310F00FA6697 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				D0A97022291019C400FA6697 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		D0A9705B2910311D00FA6697 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				D0A9705429102DCD00FA6697 /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		D0A9705C2910312E00FA6697 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D0A9705629102E7F00FA6697 /* Answer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		D0A9705D291044CC00FA6697 /* TestMainModule */ = {
+			isa = PBXGroup;
+			children = (
+				D0A9705E291044EB00FA6697 /* MainPresentetTest.swift */,
+			);
+			path = TestMainModule;
+			sourceTree = "<group>";
+		};
+		D0A9706029122A2800FA6697 /* Screenshot */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Screenshot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -277,7 +329,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A97023291019C400FA6697 /* MainViewController.swift in Sources */,
+				D0A97059291030FB00FA6697 /* Assembly.swift in Sources */,
+				D0A9705529102DCD00FA6697 /* MainPresenter.swift in Sources */,
 				D0A9701F291019C400FA6697 /* AppDelegate.swift in Sources */,
+				D0A9705729102E7F00FA6697 /* Answer.swift in Sources */,
 				D0A970532910295F00FA6697 /* MainViewIO.swift in Sources */,
 				D0A97021291019C400FA6697 /* SceneDelegate.swift in Sources */,
 				D0A9704F29101C7000FA6697 /* Constants.swift in Sources */,
@@ -289,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0A97036291019CD00FA6697 /* Magic8Ball_CourseTaskTests.swift in Sources */,
+				D0A9705F291044EC00FA6697 /* MainPresentetTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
